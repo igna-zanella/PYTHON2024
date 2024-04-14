@@ -1,0 +1,105 @@
+num1 = int(input("Escriba un numero:"))
+num2 = int(input("Escriba segundo numero:"))
+num3 = int(input("Escriba tercer numero:"))
+if num1==num2 and num2==num3:
+    print("los 3 numeros son iguales")
+elif num1==num2 or num2==num3 or num1==num3:
+    print("Hay 2 numeros iguales")
+else:
+    print("los 3 son distintos")
+
+fecha = int(input("Escriba un año y le diré si es bisiesto: "))
+
+if fecha % 400 == 0:
+    print("El año es un año bisiesto porque es múltiplo de 400.")
+elif fecha % 100 == 0:
+    print("El año no es un año bisiesto porque es múltiplo de 100 sin ser múltiplo de 400.")
+elif fecha % 4 == 0:
+    print("El año es un año bisiesto porque es múltiplo de 4 sin ser múltiplo de 100.")
+else:
+    print("El año no es un año bisiesto.")
+
+
+
+print("Elija una figura geométrica:")
+print("t o T) Triángulo")
+print("c o C) Círculo")
+respuesta = input("¿Qué figura quiere calcular? ")
+if respuesta == "T" or respuesta == "t":
+    base = float(input("Escriba la base: "))
+    altura = float(input("Escriba la altura: "))
+    print("El triángulo tiene un área de: ", base * altura / 2)
+elif respuesta == "C" or respuesta == "c":
+    r = float(input("Escriba el radio: "))
+    print("El circulo tiene un área de:", 3.141592 * r * r)
+else:
+    print("Opcion incorrecta")
+
+
+centimetros = int(input("Escriba una distancia en centímetros: "))
+if centimetros <= 0:
+    print("Escriba una distancia mayor que cero.")
+else:  
+    kilometros = centimetros // 100000
+    metros = centimetros % 100000 // 100
+    resto = centimetros % 100
+    print(centimetros, "centímetros son:" ,kilometros, "km", metros ,"m", resto ,"cm.")
+
+
+"""
+MC
+primero lista de precios
+menu para elegir la hamburguesa
+agrandar o no el combo
+forma de pago si es en efectivo 10% descuento
+si es tarjeta en cuotas que te diga las cuotas
+si es jubilado un 5%
+"""
+
+print("""
+BIENVENIDOS A MC DONALDS
+
+Decida qué menú desea pedir:
+
+1) MC Pollo con Queso $4800
+2) MC Pollo Napolitana $5500
+3) MC Medallones lomitos $6300
+4) MC Súper Carne $7800
+5) MC Tasty $9990
+6) MC Whopper $10750
+7) MC Ultra Beef $12350
+
+""")
+
+precios = [4800,5500,6300,7800,9990,10750,12350]
+
+
+print("""
+CALCULOS DE ÁREAS
+Elija una figura geométrica:
+a)Triángulo
+b)Círculo
+""")
+
+opcion = input("¿Qué figura quiere calcular (Escriba T o C)?").capitalize()
+
+if opcion == "T":
+    base = int(input("Ingrese el valor de la base: "))
+    altura = int(input("Ingrese el valor de la altura: "))
+    print("El área del triángulo es", base * altura/2 )
+elif opcion == "C":
+    radio = int(input("Ingrese el valor del radio: "))
+    print("El área del círculo es", (radio*radio)*3.141592)
+else:
+    print("Opción incorrecta. Vuelva a intentarlo.")
+
+print("CONVERTIDOR DE CM A KM, M Y CM")
+medida = int(input("Escriba una distancia en centímetros: "))
+
+if medida > 0:
+    km = medida // 100000
+    metros = medida % 100000 // 100
+    medida = medida  % 100
+    print(medida,"cms son", int(km),"kms", int(metros), "ms", int(medida), "cms")
+else:
+    print("Escriba una distancia mayor a cero.")
