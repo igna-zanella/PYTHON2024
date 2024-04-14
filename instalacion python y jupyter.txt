@@ -1,0 +1,23 @@
+verificar que tienen Python instalado con Python - - versión desde el cmd
+si es así hay que desintalarlo 
+descargar Python de la web oficial Python.org
+ejecutamos el instalador 
+tildamos la opción add Python to path 
+customize installation 
+todo tildado 
+install Python 3.11 for all users 
+ si les aparece disable path lenght limit hacer click ahí 
+verificar que haya quedado instalado el Python 
+en el cmd Python - - versión
+Ahora hay que instalar jupyter notebook 
+Pip install notebook 
+Si dice que no se encuentra pip escribir Python -m pip install notebook 
+Si les tira warnings durante la instalación tienen que seleccionar la ruta del warning con click derecho lo copiamos 
+Probamos si podemos ejecutar jupyter notebook
+Jupyter notebook en el cmd
+Vamos a buscar en el inicio de Windows path y nos aparece un botón de editar variables de entorno 
+Buscamos la opción de variables de entorno 
+En variables de sistema buscamos la variable path y la editamos
+Darle a nuevo 
+Y vamos a pegar la ruta que habíamos copiado y con el boton subir la vamos a subir hasta que quede arriba de la ruta de los scripts que estaba le damos aceptar
+Y ahora si ejecutamos de vuelta desde el cmd jupyter notebook lo vamos a poder abrir desde nuestro navegador 

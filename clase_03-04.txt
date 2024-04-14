@@ -1,0 +1,177 @@
+# 03-04
+
+# Ejercicios if
+# Ejercicio 1
+# Escriba un programa que pida primero un número par y luego un número impar (positivos o negativos). En caso de que uno o los dos valores no sea correcto, se mostrará un único aviso.
+
+print("PAR E IMPAR 1")
+
+par = int(input("Por favor, ingrese un número par: "))
+impar = int(input("Por favor, ingrese un número impar: "))
+
+if (par % 2 == 0) and (impar %2 != 0):
+    print("¡Gracias por su colaboración!")
+else:
+    print("Uno o más de los valores que ha escrito no son correctos")
+    print("Ejecute de nuevo el programa para volver a intentarlo")
+
+
+# ---
+
+# Ejercicio 2
+# Escriba un programa que pida primero un número par (positivo o negativo) y si el valor no es correcto, muestre un aviso. Si el valor es correcto, pedirá un número impar (positivo o negativo) y si el valor no es correcto, mostrará un aviso.
+
+print("PAR E IMPAR 2")
+
+par = int(input("Por favor, ingrese un número par: "))
+
+if par % 2 == 0:
+    impar = int(input("Por favor, ingrese un número impar: "))
+    if impar % 2 != 0:
+        print("¡Gracias por su colaboración!")
+    else:    
+        print("No ha escrito un número impar")
+        print("Ejecute de nuevo el programa para volver a intentarlo")
+    
+else:
+    print("No ha escrito un número par")
+    print("Ejecute de nuevo el programa para volver a intentarlo")
+
+# ---
+
+# Ejercicio 3
+# Escriba un programa que pida primero un número par y a continuación un numero impar (positivos o negativos). En caso de que uno o los dos valores no sean correctos, se mostrarán uno o dos avisos.
+
+print("PAR E IMPAR 3")
+
+par = int(input("Por favor, ingrese un número par: "))
+impar = int(input("Por favor, ingrese un número impar: "))
+
+if (par % 2 == 0) and (impar %2 != 0):
+    print("¡Gracias por su colaboración!")
+elif (impar % 2 == 0) and (par %2 == 0):
+    print("No ha escrito un número impar.")
+    print("Ejecute de nuevo el programa para volver a intentarlo.")
+elif (impar % 2 != 0) and (par %2 != 0):
+    print("No ha escrito un número par.")
+    print("Ejecute de nuevo el programa para volver a intentarlo.")
+else:
+    print("No ha escrito un número par ni tampoco impar donde corresponde.")
+    print("Ejecute de nuevo el programa para volver a intentarlo.")
+
+
+
+# ---
+
+# Ejercicio 4
+# Escriba un programa que pida primero un número par y a continuación un numero impar (positivos o negativos). En cada petición, si el valor no es correcto se mostrará un aviso.
+
+print("PAR E IMPAR 4")
+
+par = int(input("Por favor, ingrese un número par: "))
+if par % 2 != 0:
+    print("No ha ingresado un número par.")
+    impar = int(input("Por favor, ingrese un número impar: "))
+    if  impar % 2 == 0:
+        print("No ha ingresado un número impar.")
+    print("Ejecute de nuevo el programa para volver a intentarlo.")
+elif par % 2 == 0:
+    impar = int(input("Por favor, ingrese un número impar: "))
+    if impar % 2 == 0:
+        print("No ha ingresado un número impar.")
+        print("Ejecute de nuevo el programa para volver a intentarlo.")
+    else:
+        print("¡Gracias por su colaboración!")
+
+# ---
+
+# Ejercicio 5
+
+# Escriba un programa que pida dos números enteros y que calcule su división, escribiendo si la división es exacta o no.
+
+print("DIVISOR DE NÚMEROS")
+
+num1 = int(input("Escriba el dividendo: "))
+num2 = int(input("Escriba el divisor: "))
+
+resto = num1 % num2
+cociente = num1 // num2
+
+if resto == 0:
+    print("La división es exacta. Cociente: ", '\033[33m'+str(cociente)+'\033[0m')
+else:
+    print("La división no es exacta. Cociente:", '\033[33m'+str(cociente)+'\033[0m' ,"Resto:" , '\033[33m'+str(resto)+'\033[0m' ,".")
+
+#  ---
+
+# Ejercicio 6
+
+# Mejore el programa anterior haciendo que tenga en cuenta que no se puede dividir por cero
+
+num1 = int(input("Escriba el dividendo: "))
+num2 = int(input("Escriba el divisor: "))
+
+if num2 != 0:
+    resto = num1 % num2
+    cociente = num1 // num2
+    if resto == 0:
+        print("La división es exacta. Cociente: ", '\033[33m'+str(cociente)+'\033[0m')
+    else:
+        print("La división no es exacta. Cociente:", '\033[33m'+str(cociente)+'\033[0m' ,"Resto:" , '\033[33m'+str(resto)+'\033[0m' ,".")
+else:
+    print('\033[33m' + "No se puede dividir entre cero." +'\033[0m' + "Vuelva a intentarlo.")
+
+
+# Ejercicio 7
+
+# Escriba un programa que pida dos números y que conteste cuál es el menor y cuál el mayor o que escriba que son iguales.
+
+print("\nIngrese dos números para averiguar si son iguales o cuál es el mayor: ")
+num1 = int(input("\nPrimer Número: "))
+num2 = int(input("Segundo Número: "))
+
+if num1 == num2:
+    print("\nLos números son iguales")
+elif num1 != num2:
+    if num1 > num2:
+        print("\nLos números son diferentes y el primero es el mayor.")
+    else:
+        print("\nLos números son diferentes y el segundo es el mayor.")
+
+# ---
+
+#  Ejercicio 8
+
+# Escriba un programa que pida el año actual y un año cualquiera y que escriba cuántos años han pasado desde ese año o cuántos años faltan para llegar a ese año.
+
+anioActual = int(input("¿En qué año estamos?: "))
+anioVar = int(input("Escriba un año cualquiera: "))
+
+if anioActual > anioVar:
+    print("Desde el año", anioVar, "han pasado", anioActual - anioVar, "años.")
+elif anioActual < anioVar:
+    print("Para llegar al año", anioVar, "faltan", anioVar - anioActual, "años.")
+else:
+    print("¡Son el mismo año!")
+
+# ---
+
+# Ejercicio 9
+
+# Mejore el programa anterior haciendo que cuando la diferencia sea exactamente un año, escriba la frase en singular.
+
+anioActual = int(input("¿En qué año estamos?: "))
+anioVar = int(input("Escriba un año cualquiera: "))
+
+if anioActual > anioVar:
+    if anioActual - anioVar == 1:
+        print("Desde el año", anioVar, "ha pasado", anioActual - anioVar, "año.")
+    else:
+        print("Desde el año", anioVar, "han pasado", anioActual - anioVar, "años.")
+elif anioActual < anioVar:
+    if anioVar - anioActual == 1:
+        print("Para el año", anioVar, "falta", anioVar - anioActual, "año.")
+    else:
+        print("Para llegar al año", anioVar, "faltan", anioVar - anioActual, "años.")
+else:
+    print("¡Son el mismo año!")
