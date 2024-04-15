@@ -46,7 +46,7 @@ while True:
     opcion = input("Ingresá el menú que deseás: ")
 
     if opcion == "8":
-        print('\033[33m' + "\nGracias. Vuelva prontos." + '\033[0m')
+        print('\033[33m' + "\n¡Te esperamos pronto!" + '\033[0m')
         exit()
     elif opcion.isalpha() or int(opcion) > 7 or int(opcion) < 1:
         print('\033[31m' + "\n", opcion, "no es una opción válida. Reintentalo." + '\033[0m')
@@ -169,4 +169,4 @@ while n:
             
 
 # print(total)
-print('\033[33m' + "\nGracias. Vuelva prontos." + '\033[0m')
+print('\033[33m' + "\n¡Gracias por elegirnos!" + '\033[0m')
