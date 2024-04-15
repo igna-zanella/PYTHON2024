@@ -19,8 +19,7 @@
 # alt 206 ╬
 #
 
-l = True
-while l:
+while True:
     print('\033[33m' + """
     TE DAMOS LA BIENVENIDA A MC PYTHON
 
@@ -35,6 +34,7 @@ while l:
         ║  5) MC Tasty_______________ $9990   ║
         ║  6) MC While______________ $10750   ║
         ║  7) MC Ultra Beef_________ $12350   ║
+        ║  8) SALIR                           ║
         ║                                     ║
         ╚═════════════════════════════════════╝  
 
@@ -45,7 +45,10 @@ while l:
 
     opcion = input("Ingresá el menú que deseás: ")
 
-    if opcion.isalpha() or int(opcion) > 7 or int(opcion) < 1:
+    if opcion == "8":
+        print('\033[33m' + "\nGracias. Vuelva prontos." + '\033[0m')
+        exit()
+    elif opcion.isalpha() or int(opcion) > 7 or int(opcion) < 1:
         print('\033[31m' + "\n", opcion, "no es una opción válida. Reintentalo." + '\033[0m')
     else:
         # total = precios[opcion-1]
@@ -66,27 +69,27 @@ while l:
         ╚═════════════════════════════════════════╝
 
         """ + '\033[0m')
-            opcionCombo = int(input("Elegí tu opción: "))
+            opcionCombo = input("Elegí tu opción: ")
             
-            if opcionCombo > 4 or opcionCombo < 1:
-                print('\033[31m' + "\n", opcionCombo, "no es una opción válida. Reintentalo." + '\033[0m')
-            elif opcionCombo == 4:
+            if opcionCombo == "4":
                 print("\n¡No hay problema! Vamos al pago")
                 break
+            elif opcionCombo.isalpha() or int(opcionCombo) > 4 or int(opcionCombo) < 1:
+                print('\033[31m' + "\n", opcionCombo, "no es una opción válida. Reintentalo." + '\033[0m')
             else:
-                precios[int(opcion)-1] += preciosCombo[opcionCombo-1]
+                precios[int(opcion)-1] += preciosCombo[int(opcionCombo)-1]
                 print("\n¡Agrandaste tu combo! Vamos al pago")
                 print("Hasta acá pagás " + '\033[32m' + "$" + str(precios[int(opcion)-1]) + '\033[0m')
                 break
-        l = False
+        break
 
 total = precios[int(opcion)-1]
 # jubilado = None
 n = True
 
 while n:
-    print("\nPromo jubilados de 5%")
-    jubilado = input("¿Sos jubilado? (S = sí / N = no) ").upper()
+    print('\033[33m' + "\n¡Promo jubilados/as! 👵 Descuento del 5% 👴" + '\033[0m')
+    jubilado = input("¿Sos jubilado/a? (S = sí / N = no) ").upper()
     
     if jubilado == "S":
         total = total - (total * .05)
