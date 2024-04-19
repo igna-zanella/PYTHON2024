@@ -55,16 +55,14 @@ while True:
                 print("\n¡No hay problema! Vamos al pago")
                 break
             elif opcionCombo.isalpha() or int(opcionCombo) > 4 or int(opcionCombo) < 1:
-                print('\033[31m' + "\n", opcionCombo, "no es una opción válida. Reintentalo.  🤷‍♀️" + '\033[0m')
+                print('\033[31m' + "\n", opcionCombo, "no es una opción válida. Reintentalo 🤷‍♀️" + '\033[0m')
             else:
                 precios[int(opcion)-1] += preciosCombo[int(opcionCombo)-1]
                 print('\033[33m' + "\n¡Agrandaste tu combo! Vamos al pago 👌" + '\033[0m')
                 print("Hasta acá pagás " + '\033[32m' + "$" + str(precios[int(opcion)-1]) + '\033[0m')
                 break
-        #break
 
         total = precios[int(opcion)-1]
-        # jubilado = None
         
         while True:
             print('\033[33m' + "\n¡Promo jubilados/as! 👵 Descuento del 5% 👴" + '\033[0m')
@@ -76,7 +74,7 @@ while True:
             elif jubilado == "N":
                 break
             else:
-                print('\033[31m' + "\n", jubilado,  "no es una opción válida. Reintentalo.  🤷‍♀️" + '\033[0m')
+                print('\033[31m' + "\n", jubilado,  "no es una opción válida. Reintentalo 🤷‍♀️" + '\033[0m')
             
         print("\nEl precio final de tu combo es " + '\033[32m' + "$" + str(total) + '\033[0m')
         
@@ -141,11 +139,11 @@ while True:
                         # c = False
                         break
                     else:
-                        print('\033[31m' + "\n", cuota,  "no es una opción válida. Reintentalo.  🤷‍♀️" + '\033[0m')
+                        print('\033[31m' + "\n", cuota,  "no es una opción válida. Reintentalo 🤷‍♀️" + '\033[0m')
                 print('\033[33m' + "Prepará tu tarjeta y seguí las instrucciones del posnet ¡Disfrutá tu combo!" + '\033[0m')
                 break
             else:
-                print('\033[31m' + "\n", pago,  "no es una opción válida. Reintentalo.  🤷‍♀️" + '\033[0m')
+                print('\033[31m' + "\n", pago,  "no es una opción válida. Reintentalo 🤷‍♀️" + '\033[0m')
                     
         break
 print('\033[33m' + "\n¡Gracias por elegirnos! 👍" + '\033[0m')
