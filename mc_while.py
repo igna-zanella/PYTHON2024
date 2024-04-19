@@ -76,7 +76,7 @@ while True:
             elif jubilado == "N":
                 break
             else:
-                print('\033[31m' + "\nOpción no válida" + '\033[0m')
+                print('\033[31m' + "\n", jubilado,  "no es una opción válida. Reintentalo.  🤷‍♀️" + '\033[0m')
             
         print("\nEl precio final de tu combo es " + '\033[32m' + "$" + str(total) + '\033[0m')
         
@@ -141,11 +141,11 @@ while True:
                         # c = False
                         break
                     else:
-                        print('\033[31m' + "\nOpción no válida 🤷‍♀️" + '\033[0m')
+                        print('\033[31m' + "\n", cuota,  "no es una opción válida. Reintentalo.  🤷‍♀️" + '\033[0m')
                 print('\033[33m' + "Prepará tu tarjeta y seguí las instrucciones del posnet ¡Disfrutá tu combo!" + '\033[0m')
                 break
             else:
-                print('\033[31m' + "\nOpción no válida 🤷‍♀️" + '\033[0m')
+                print('\033[31m' + "\n", pago,  "no es una opción válida. Reintentalo.  🤷‍♀️" + '\033[0m')
                     
         break
 print('\033[33m' + "\n¡Gracias por elegirnos! 👍" + '\033[0m')
