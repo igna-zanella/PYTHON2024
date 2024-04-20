@@ -38,26 +38,50 @@ import random ### para realizar un entero pidiendo rango
 #     █                  █
 #     ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
 #     """)
+# by jgs
+
 import random
 
 ROJO = '\033[31m'
 VERDE = '\033[92m'
 FIN_LINEA = '\033[0m'
+NEGRO   = '\033[30m'
+AMARILLO  = '\033[33m'
+AZUL    = '\033[34m'
+MAGENTA = '\033[35m'
+CIAN    = '\033[36m'
+BLANCO   = '\033[37m'
 
 print(f""""
-¡¡¡ BIENVENIDOS al {VERDE}18{FIN_LINEA} !!! 
-
+    
+{AMARILLO}BIENVENIDOS A {FIN_LINEA}
+{VERDE}
+  ___   _        _   ___ 
+ | __| | |      / | ( _ )
+ | _|  | |__    | | / _ \\
+ |___| |____|   |_| \___/
+                         
+        .-------.
+       /   o   /|
+      /_______/o|
+      | o     | |
+      |   o   |o/
+      |     o |/
+      '-------'   
+      {FIN_LINEA}{AMARILLO}
 ... tirá el dado y no te pasés de 18 si querés ganar 🤩
+{FIN_LINEA}
+
 """)
 
 cant_jugadores = int(input("Ingresá la cantidad de jugadores: "))
 lista_numeros = []
 lista_jugadores = []
 # for x in range(cant_jugadores):
-i=1
 
+i=1
 while i <= cant_jugadores:
-    print("Turno",i)
+    print("\nTurno",i)
     numero = 0
     jugadores = input("¿Cuál es tu nombre? ")
     print("Hola", jugadores, "¡Vamos a jugar! 🎲")
@@ -74,17 +98,17 @@ while i <= cant_jugadores:
             print("Sacaste un ", dado)
             print("Hasta acá llevás", numero, "puntos.")
     if numero > 18:
-        print("¡Perdiste! 🙈")
+        print("\n¡Perdiste! 🙈")
         i+=1
     else:
-        print("Te plantaste con", numero, "puntos ✨") #😅😏
+        print("\nTe plantaste con", numero, "puntos ✨") #😅😏
         lista_numeros.append(numero)
 
 print(lista_numeros)
 maximo = max(lista_numeros)
 if lista_numeros.count(maximo) > 1:
-    print ("¡Empate! 😜")
+    print ("\n¡Empate! 😜")
     print(lista_numeros.count(maximo))
 else:
     i = lista_numeros.index(maximo)
-    print("Ganó", lista_jugadores[i],"con", maximo, "puntos 😎")
+    print("\nGanó", lista_jugadores[i],"con", maximo, "puntos 😎")
