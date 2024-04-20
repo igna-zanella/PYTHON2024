@@ -82,8 +82,9 @@ while i <= cant_jugadores:
 
 print(lista_numeros)
 maximo = max(lista_numeros)
-if lista_numeros.count(maximo) > 0:
+if lista_numeros.count(maximo) > 1:
     print ("¡Empate! 😜")
+    print(lista_numeros.count(maximo))
 else:
     i = lista_numeros.index(maximo)
     print("Ganó", lista_jugadores[i],"con", maximo, "puntos 😎")
