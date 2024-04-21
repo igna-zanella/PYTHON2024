@@ -53,22 +53,23 @@ CIAN    = '\033[36m'
 BLANCO   = '\033[37m'
 
 print(f""""
-    
-{AMARILLO}BIENVENIDOS A {FIN_LINEA}
+
+{AMARILLO}
+BIENVENIDOS A {FIN_LINEA}
 {VERDE}
-  ___   _        _   ___ 
- | __| | |      / | ( _ )
- | _|  | |__    | | / _ \\
- |___| |____|   |_| \___/
-                         
-        .-------.
-       /   o   /|
-      /_______/o|
-      | o     | |
-      |   o   |o/
-      |     o |/
-      '-------'   
-      {FIN_LINEA}{AMARILLO}
+                 ___   _        _   ___ 
+                | __| | |      / | ( _ )
+                | _|  | |__    | | / _ \\
+                |___| |____|   |_| \___/
+                                        
+                      .-------.
+                     /   o   /|
+                    /_______/o|
+                    | o     | |
+                    |   o   |o/
+                    |     o |/
+                    '-------'   
+{FIN_LINEA}{AMARILLO}
 ... tirá el dado y no te pasés de 18 si querés ganar 🤩
 {FIN_LINEA}
 
@@ -106,7 +107,7 @@ while i <= cant_jugadores:
 
 print(lista_numeros)
 if lista_numeros == []:
-    print(ROJO + "Todos pierden" + FIN_LINEA)
+    print(ROJO + "¡¡¡Todos pierden!!! 😭" + FIN_LINEA)
 else:
     maximo = max(lista_numeros)
     if lista_numeros.count(maximo) > 1:
