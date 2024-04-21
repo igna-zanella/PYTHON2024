@@ -81,10 +81,10 @@ lista_jugadores = []
 
 i=1
 while i <= cant_jugadores:
-    print("\nTurno",i)
+    print(AMARILLO + "\nTurno",str(i) + FIN_LINEA)
     numero = 0
     jugadores = input("¿Cuál es tu nombre? ")
-    print("Hola", jugadores, "¡Vamos a jugar! 🎲")
+    print(AMARILLO + "Hola", jugadores, "¡Vamos a jugar! 😏" + FIN_LINEA)
     lista_jugadores.append(jugadores)
     while True and numero < 19:
         rep = input("'S' para tirar el dado o 'N' para retirarte: ").upper()
@@ -95,20 +95,23 @@ while i <= cant_jugadores:
         elif rep == "S":
             dado = random.randint(1,6)
             numero += dado
-            print("Sacaste un ", dado)
-            print("Hasta acá llevás", numero, "puntos.")
+            print(VERDE + "Sacaste un ", str(dado), "🎲" + FIN_LINEA)
+            print(AMARILLO + "Hasta acá llevás", str(numero), "puntos." + FIN_LINEA)
     if numero > 18:
-        print("\n¡Perdiste! 🙈")
+        print(ROJO + "\n¡Perdiste! 🙈" + FIN_LINEA)
         i+=1
     else:
-        print("\nTe plantaste con", numero, "puntos ✨") #😅😏
+        print(AMARILLO + "\nTe plantaste con", str(numero), "puntos 😅" + FIN_LINEA)
         lista_numeros.append(numero)
 
 print(lista_numeros)
-maximo = max(lista_numeros)
-if lista_numeros.count(maximo) > 1:
-    print ("\n¡Empate! 😜")
-    print(lista_numeros.count(maximo))
+if lista_numeros == []:
+    print(ROJO + "Todos pierden" + FIN_LINEA)
 else:
-    i = lista_numeros.index(maximo)
-    print("\nGanó", lista_jugadores[i],"con", maximo, "puntos 😎")
+    maximo = max(lista_numeros)
+    if lista_numeros.count(maximo) > 1:
+        print (AMARILLO + "\n¡Empate! 😜" + FIN_LINEA)
+        print(lista_numeros.count(maximo))
+    else:
+        i = lista_numeros.index(maximo)
+        print(VERDE + "\nGanó", lista_jugadores[i],"con", str(maximo), "puntos 😎" + FIN_LINEA)
