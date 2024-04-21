@@ -14,7 +14,6 @@ import random ### para realizar un entero pidiendo rango
 # while i <= cant:
 #     j1 = input("Ingrese su nombre: ")
 #     input("ENTER para tirar")
-#     i = i+1
 #     total=0
 #     while True:
 #         dec=input("¿Tira otra vez?: ")
@@ -25,6 +24,7 @@ import random ### para realizar un entero pidiendo rango
 #             total+=dado
 #         elif dec == "no":
 #             break
+#             i = i+1
 #         print("Su puntaje es", total)
         
 
@@ -48,38 +48,6 @@ import random ### para realizar un entero pidiendo rango
 # alt 218 ┌
 # alt 7 •
 
-print('''
-    ┌─────────┐
-    │         │
-    │    •    │
-    │         │ 
-    └─────────┘
-    ┌─────────┐
-    │      •  │
-    │         │
-    │  •      │ 
-    └─────────┘
-    ┌─────────┐
-    │      •  │
-    │    •    │
-    │  •      │ 
-    └─────────┘
-    ┌─────────┐
-    │  •   •  │
-    │         │
-    │  •   •  │
-    └─────────┘
-    ┌─────────┐
-    │  •   •  │
-    │    •    │
-    │  •   •  │
-    └─────────┘
-    ┌─────────┐
-    │  •   •  │
-    │  •   •  │
-    │  •   •  │
-    └─────────┘
-    ''')
 
 
 import random
@@ -186,20 +154,20 @@ lista_numeros = []
 lista_jugadores = []
 # for x in range(cant_jugadores):
 
-i=1
-while i <= cant_jugadores:
-    print(AMARILLO + "\nTurno",str(i) + FIN_LINEA)
+rondas=1
+while rondas <= cant_jugadores:
+    print(AMARILLO + "\nTurno",str(rondas) + FIN_LINEA)
     numero = 0
     jugadores = input("¿Cuál es tu nombre? ")
     print(AMARILLO + "Hola", jugadores, "¡Vamos a jugar! 😏" + FIN_LINEA)
     lista_jugadores.append(jugadores)
     while True and numero < 19:
-        rep = input("'S' para tirar el dado o 'N' para retirarte: ").upper()
-        if rep == "N":
-            print("bye bye")
-            i+=1
+        tiro = input("'S' para tirar el dado o 'N' para retirarse: ").upper()
+        if tiro == "N":
+            # print("bye bye")
+            rondas+=1
             break
-        elif rep == "S":
+        elif tiro == "S":
             dado = random.randint(1,6)
             numero += dado
             print(VERDE + "Sacaste un ", str(dado), "🎲" + FIN_LINEA)
@@ -218,12 +186,14 @@ while i <= cant_jugadores:
             print(AMARILLO + "Hasta acá llevás", str(numero), "puntos." + FIN_LINEA)
     if numero > 18:
         print(ROJO + "\n¡Perdiste! 🙈" + FIN_LINEA)
-        i+=1
+        input(VERDE + "ENTER para continuar... " + FIN_LINEA)
+        rondas+=1
     else:
         print(AMARILLO + "\nTe plantaste con", str(numero), "puntos 😅" + FIN_LINEA)
+        input(VERDE + "ENTER para continuar... " + FIN_LINEA)
         lista_numeros.append(numero)
 
-print(lista_numeros)
+# print(lista_numeros)
 if lista_numeros == []:
     print(ROJO + "¡¡¡Todos pierden!!! 😭" + FIN_LINEA)
 else:
