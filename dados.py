@@ -1,5 +1,5 @@
 
-import random ### para realizar un entero pidiendo rango
+# import random ### para realizar un entero pidiendo rango
 
 # print(""""
 # Bienvenidos al 18 
@@ -7,24 +7,25 @@ import random ### para realizar un entero pidiendo rango
 # no te pases del 18 si queres ganar
 # """)
 
-# i=0
+# i=1
 # cant = int(input("Ingrese cantidad de jugadores: "))
 # dec = "si" 
 
 # while i <= cant:
 #     j1 = input("Ingrese su nombre: ")
-#     input("ENTER para tirar")
+#     # input("ENTER para tirar")
 #     total=0
 #     while True:
-#         dec=input("¿Tira otra vez?: ")
+#         dec=input("¿Tira?: ")
 #         if dec == "si":
 #             print(i)
 #             dado = random.randint(1, 6)
 #             print(j1,"Su número es",dado)
 #             total+=dado
 #         elif dec == "no":
-#             break
 #             i = i+1
+#             break
+            
 #         print("Su puntaje es", total)
         
 
@@ -51,6 +52,30 @@ import random ### para realizar un entero pidiendo rango
 
 
 import random
+
+
+# print(f""""
+
+# {AMARILLO}
+# BIENVENIDOS A {FIN_LINEA}
+# {VERDE}
+#                  ___   _        _   ___ 
+#                 | __| | |      / | ( _ )
+#                 | _|  | |__    | | / _ \\
+#                 |___| |____|   |_| \___/
+                                        
+#                       .-------.
+#                      /   o   /|
+#                     /_______/o|
+#                     | o     | |
+#                     |   o   |o/
+#                     |     o |/
+#                     '-------'   
+# {FIN_LINEA}{AMARILLO}
+# ... tirá el dado y no te pasés de 18 si querés ganar 🤩
+# {FIN_LINEA}
+
+# """)
 
 ROJO = '\033[31m'
 VERDE = '\033[92m'
@@ -105,28 +130,6 @@ lado_6 = f'''{VERDE}
     └─────────┘
 '''
 
-# print(f""""
-
-# {AMARILLO}
-# BIENVENIDOS A {FIN_LINEA}
-# {VERDE}
-#                  ___   _        _   ___ 
-#                 | __| | |      / | ( _ )
-#                 | _|  | |__    | | / _ \\
-#                 |___| |____|   |_| \___/
-                                        
-#                       .-------.
-#                      /   o   /|
-#                     /_______/o|
-#                     | o     | |
-#                     |   o   |o/
-#                     |     o |/
-#                     '-------'   
-# {FIN_LINEA}{AMARILLO}
-# ... tirá el dado y no te pasés de 18 si querés ganar 🤩
-# {FIN_LINEA}
-
-# """)
 print(f""""
 
 {AMARILLO}
