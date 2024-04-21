@@ -160,12 +160,13 @@ lista_jugadores = []
 rondas=1
 while rondas <= cant_jugadores:
     print(AMARILLO + "\nTurno",str(rondas) + FIN_LINEA)
-    numero = 0
     jugadores = input("¿Cuál es tu nombre? ")
     print(AMARILLO + "Hola", jugadores, "¡Vamos a jugar! 😏" + FIN_LINEA)
     lista_jugadores.append(jugadores)
-    while True and numero < 19:
-        tiro = input("'S' para tirar el dado o 'N' para retirarse: ").upper()
+    
+    numero = 0
+    while numero < 19:
+        tiro = input(VERDE + "'S'" + FIN_LINEA + " para tirar el dado o " + VERDE + "'N'" + FIN_LINEA + " para retirarse: ").upper()
         if tiro == "N":
             # print("bye bye")
             rondas+=1
@@ -187,6 +188,8 @@ while rondas <= cant_jugadores:
             else:
                 print(lado_6)
             print(AMARILLO + "Hasta acá llevás", str(numero), "puntos." + FIN_LINEA)
+        else:
+            print(ROJO + tiro, "no es una opción válida 😬" + FIN_LINEA)
     if numero > 18:
         print(ROJO + "\n¡Perdiste! 🙈" + FIN_LINEA)
         input(VERDE + "ENTER para continuar... " + FIN_LINEA)
