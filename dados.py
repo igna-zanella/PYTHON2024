@@ -206,7 +206,11 @@ else:
     maximo = max(lista_numeros)
     if lista_numeros.count(maximo) > 1:
         print (AMARILLO + "\n¡Empate! 😜" + FIN_LINEA)
-        print(lista_numeros.count(maximo))
+        # print(lista_numeros.count(maximo))
     else:
-        i = lista_numeros.index(maximo)
-        print(VERDE + "\nGanó", lista_jugadores[i],"con", str(maximo), "puntos 😎" + FIN_LINEA)
+        if maximo == 18:
+            i = lista_numeros.index(maximo)
+            print(VERDE + "\n¡¡¡Puntuación perfecta!!! 🤩  Ganó", lista_jugadores[i],"con", str(maximo), "puntos 😎" + FIN_LINEA)
+        else:
+            i = lista_numeros.index(maximo)
+            print(VERDE + "\nGanó", lista_jugadores[i],"con", str(maximo), "puntos 😎" + FIN_LINEA)
