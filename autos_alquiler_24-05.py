@@ -45,7 +45,7 @@ G.Volver al Menú principal
                                 print("Ingrese los datos del nuevo vehículo: \n")
                                 patente = input("Patente: ")
                                 km = int(input("Kilometraje: "))
-                                precio = float(input("Precio: "))
+                                precio = int(input("Precio: $"))
                                 tipo = input("Tipo: ")
                                 if tipo == "alquiler":
                                     disponibilidad = "SI"
@@ -71,7 +71,7 @@ G.Volver al Menú principal
                                 for x in autos:
                                     if x == patente:
                                         km = int(input("Kilometraje: "))
-                                        precio = float(input("Precio: "))
+                                        precio = int(input("Precio: $"))
                                         tipo = input("Tipo: ")
                                         disponibilidad = input("Disponibilidad (SI/NO): ").upper()
                                         autos[patente] = {"kilometraje":km, "precio":precio, "tipo":tipo, "disponibilidad":disponibilidad}
