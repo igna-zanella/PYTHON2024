@@ -34,6 +34,7 @@ empleados = {
 autos={
     "ABC123":{"km":5000,"precio":90000,"tipo":'v',"disponibilidad":'s'},
     "JKL123":{"km":10000,"precio":100000,"tipo":'a',"disponibilidad":'n'},
+    "WWW111":{"km":1000,"precio":400000,"tipo":'a',"disponibilidad":'n'},
     "AD123JK":{"km":0,"precio":190000,"tipo":'v',"disponibilidad":'s'}
 }
 operaciones={"1":{"cliente":'12345678',"patente":'ABC123',"usuario":'fede'},
@@ -125,11 +126,12 @@ def listaAutos():
 def autorizarRepuestos(caja):
     print("Autorizaciones de repuestos")
     print(repuestos)
-    autorizazion = input("Autoriza la compra de repuestos (SI / NO): ")
+    autorizazion = input("Autoriza la compra de repuestos (SI / NO): ").upper()
     if autorizazion == "SI":
         
         caja -= repuestos["WWW111"]["precio"]
         print("Repuesto autorizado")
+        print(caja)
         return caja
     else:
         print("Repuesto no autorizado")
@@ -213,10 +215,9 @@ def modificarEmpleados():
 
 
 # ------------------------- FIN EMPLEADOS -----------------------------------------------
-# ------------------------- FIN SISTEMA SUPERVISOR --------------------------------------
 
 
-def menuSupervisor():
+def menuSupervisor(caja):
     while True:                
                     print("""
 1.	Flota de rodados  
@@ -278,7 +279,7 @@ B.Volver al Menú principal
 """)
                         opc2=input()
                         if opc2 == "a":
-                            autorizarRepuestos()
+                            autorizarRepuestos(caja)
 
                     elif opc=="4":
                         print("""
@@ -291,6 +292,9 @@ A.Caja
                     else:
                         print("Ha cerrado sesión")
                         return caja                 
+
+# ------------------------- FIN SISTEMA SUPERVISOR --------------------------------------
+
 
 def menuVendedor():
     while True:
